@@ -10,7 +10,7 @@ In chapter [Loading a page containing JavaScript - review](https://fullstackopen
 
 The diagram was made using [websequencediagrams](https://www.websequencediagrams.com/) service as follows:
 
-```mermaid
+```text
 sequenceDiagram
     participant browser
     participant server
