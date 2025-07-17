@@ -121,3 +121,29 @@ sequenceDiagram
     Note right of browser: The browser executes the callback function that renders the notes
 ```
 
+# 0.6: New note in Single page app diagram
+Create a diagram depicting the situation where the user creates a new note using the single-page version of the app.
+
+This was the last exercise, and it's time to push your answers to GitHub and mark the exercises as done in the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
+
+## Solution to 0.6: New note in Single page app diagram:
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+
+    Note left of browser: The user enters a new note and clicks on Save
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    
+    Note left of browser: The POST request contains the content of the note and the timestamp
+
+    Note right of server: The server returns a json object
+
+    activate server
+    server-->>browser: 201 Created - {"message":"note created"}
+    deactivate server
+
+    Note left of browser: The browser stays on same page, updating the UI with the new note
+```
